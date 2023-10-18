@@ -15,13 +15,17 @@ int[] createmassive(int length)
 }
 
 void printMassive(int[] massive)
-{
+{System.Console.Write("[");
     foreach (var item in massive)
     {
-        System.Console.Write($"{item} ");
+        
+        System.Console.Write($"{item},");   
     }
+
+System.Console.WriteLine($"]");
 }
 System.Console.Write("Введите длину массива: ");
+
 int lenght = Convert.ToInt32(Console.ReadLine());
 int[] massive = createmassive(lenght);
 printMassive(massive);
